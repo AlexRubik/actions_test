@@ -8,5 +8,7 @@ jobs:
     steps:
       - run: |
           npm install -g contentful-cli
-          echo bruh1
-          echo bruh2
+          contentful login --mt CFPAT-OVP5kAoVMelcTMJ7zSzLnRLlx7yvO-83m8wHnH-GdaU
+          contentful space export --space-id 5jkg9bgtmne0 --environment-id master --content-file export.json --content-only
+          contentful space import --space-id 5jkg9bgtmne0 --environment-id testenv --content-file export.json
+          echo ACTION DONE
