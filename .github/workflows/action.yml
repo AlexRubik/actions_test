@@ -7,5 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
+          npm install -g contentful-cli
           echo bruh1
           echo bruh2
