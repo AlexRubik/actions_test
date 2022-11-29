@@ -16,5 +16,5 @@ const octokit = new Octokit({
     workflow_id: 'action.yml', // yaml file name for workflow
     ref: 'main' // branch name
     
-  })
+  }).then((res) => console.log(res.status))
 

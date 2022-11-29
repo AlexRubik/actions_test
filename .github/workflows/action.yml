@@ -7,8 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          npm install -g contentful-cli 
-          contentful login --mt ${{ secrets.CONTENTFUL_MT }}
-          contentful space export --space-id 5jkg9bgtmne0 --environment-id master --content-file export.json --content-only
-          contentful space import --space-id 5jkg9bgtmne0 --environment-id testenv --content-file export.json
           echo ACTION DONE
